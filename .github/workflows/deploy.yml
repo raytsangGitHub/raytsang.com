@@ -1,0 +1,42 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Or whichever branch you use for production
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Set up Node.js (ensure compatibility with Vite)
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22.12.0'  # or whichever version you prefer
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Build the project
+      - name: Build project
+        run: npm run build
+
+      # Debug
+   # env: 
+   #   ACTIONS_STEP_DEBUG true
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.0.0
+        with:
+          branch: gh-pages  # Branch where GitHub Pages will be published
+          folder: dist      # Folder to deploy (output of Vite build)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub Actions
