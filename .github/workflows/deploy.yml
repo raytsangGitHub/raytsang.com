@@ -39,4 +39,4 @@ jobs:
           branch: gh-pages  # Branch where GitHub Pages will be published
           folder: dist      # Folder to deploy (output of Vite build)
         #env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub Actions
+          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub Actions
