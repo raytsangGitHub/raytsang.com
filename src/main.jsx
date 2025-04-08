@@ -3,12 +3,18 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App.jsx';
+import ReactReference from './ReactRef.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter basename='/raytsang.com/'>
       <Routes>
-        <Route path="*" element={<App />} />
+        <Route path="/" element={
+          <>
+            <App />
+            <ReactReference />
+          </>
+        } />
       </Routes>
     </BrowserRouter>
   </StrictMode>
