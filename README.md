@@ -3,7 +3,9 @@ Install the Vite build environment:
     npm create vite@latest Scratch-Vite-React -- --template react
     cd Scratch-Vite-React
     npm i
-    
+
+Ref for tailwind CSS setup: https://www.youtube.com/watch?v=RjzTBfX79Cc 
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
