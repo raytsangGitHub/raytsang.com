@@ -10,11 +10,11 @@ function TopBar()
 
     const navLinks = (
         <>
-            <li><Link to="/skills" className="hover:underline hover:text-yellow-300">Skills</Link></li>
-            <li><Link to="/Work-Experiences" className="hover:underline hover:text-yellow-300">Experiences</Link></li>
-            <li><Link to="/Projects" className="hover:underline hover:text-yellow-300">Projects</Link></li>
-            <li><Link to="/Resume" className="hover:underline hover:text-yellow-300">Resume</Link></li>
-            <li><Link to="/ContactMe" className="hover:underline hover:text-yellow-300">Contact</Link></li>
+            <li onClick={() => setIsOpen(false)}><Link to="/skills" className="hover:underline hover:text-yellow-300">Skills</Link></li>
+            <li onClick={() => setIsOpen(false)}><Link to="/Work-Experiences" className="hover:underline hover:text-yellow-300">Experiences</Link></li>
+            <li onClick={() => setIsOpen(false)}><Link to="/Projects" className="hover:underline hover:text-yellow-300">Projects</Link></li>
+            <li onClick={() => setIsOpen(false)}><Link to="/Resume" className="hover:underline hover:text-yellow-300">Resume</Link></li>
+            <li onClick={() => setIsOpen(false)}><Link to="/ContactMe" className="hover:underline hover:text-yellow-300">Contact</Link></li>
         </>
     );
 
