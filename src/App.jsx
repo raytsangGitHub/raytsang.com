@@ -10,7 +10,12 @@ import Home from './pages/Home.jsx'; //  Home component
 import PageContent from './components/PageContent.jsx';
 import NotFoundPage from "./pages/NotFoundPage";
 
-
+// Import Top bar pages:
+import Skills from './pages/Skills';
+import WorkExperiences from './pages/WorkExperiences';
+import Projects from './pages/Projects';
+import Resume from './pages/Resume';
+import ContactMe from './pages/ContactMe';
 
 function App()
 {
@@ -24,6 +29,14 @@ function App()
         <Route path="profile" element={<Profile />} />
         <Route path="settings" element={<Settings />} />
         <Route path="/reference" element={<ReactReference />} />
+
+        {/* TopBar links*/}
+        <Route path="skills" element={<Skills />} />
+        <Route path="work-experiences" element={<WorkExperiences />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="resume" element={<Resume />} />
+        <Route path="contactMe" element={<ContactMe />} />
+
         {/* 404 Catch-All */}
         <Route path="*" element={<NotFoundPage />} />
       </Route>
