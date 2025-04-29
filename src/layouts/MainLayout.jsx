@@ -10,7 +10,7 @@ function MainLayout()
         <div className="flex flex-col h-screen">
             <TopBar />
             <div className="flex flex-1 overflow-hidden">
-                <Sidebar />
+                <Sidebar className="hidden md:block w-64 bg-gray-100" />
 
                 {/* Main Content */}
                 <main className="flex-1 bg-gray-100 p-6 overflow-y-auto">
