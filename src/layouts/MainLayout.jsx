@@ -9,9 +9,10 @@ function MainLayout()
     return (
         <div className="flex flex-col h-screen">
             <TopBar />
-            <div className="flex flex-1 overflow-hidden">
-                <Sidebar className="hidden md:block w-64 bg-gray-100" />
-
+            {/* <div className="flex flex-1 overflow-hidden">
+                <Sidebar className="hidden md:block w-64 bg-gray-100" />*/}
+                
+                <div className="flex flex-1 overflow-hidden">
                 {/* Main Content */}
                 <main className="flex-1 bg-gray-100 p-6 overflow-y-auto">
                     <Outlet /> {/* Render the nested page here */}
