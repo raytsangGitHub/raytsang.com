@@ -1,75 +1,45 @@
-import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react'; // or use SVGs if you prefer
 
 function TopBar()
 {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
+
+    const navLinks = (
+        <>
+            <li><Link to="/skills" className="hover:underline hover:text-yellow-300">Skills</Link></li>
+            <li><Link to="/Work-Experiences" className="hover:underline hover:text-yellow-300">Experiences</Link></li>
+            <li><Link to="/Projects" className="hover:underline hover:text-yellow-300">Projects</Link></li>
+            <li><Link to="/Resume" className="hover:underline hover:text-yellow-300">Resume</Link></li>
+            <li><Link to="/ContactMe" className="hover:underline hover:text-yellow-300">Contact</Link></li>
+        </>
+    );
+
     return (
+        <header className="bg-gradient-to-r from-blue-500 via-purple-300 to-pink-200 text-white px-4 py-3 flex justify-between items-center">
+            <Link to="/" className="font-semibold text-lg whitespace-nowrap hover:underline hover:text-yellow-300">
+                Raymond M. Tsang | Software Engineer
+            </Link>
 
-        <header className="h-16 bg-gradient-to-r from-blue-500 via-purple-300 to-pink-200 text-shadow-white flex items-center px-4">
-            <h2 className="text-right"> <Link to="/" className="cursor-pointer whitespace-nowrap hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300">Raymond M. Tsang | Software Engineer</Link></h2>
-            <nav className="flex w-full">
-                <ul className="flex space-x-8 ml-auto">
-
-                    <li> <Link to="/skills" className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300">Skills</Link></li>
-                    <li> <Link to="/Work-Experiences" className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300">Experiences</Link></li>
-                    <li> <Link to="/Projects" className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300">Projects</Link></li>
-                    <li> <Link to="Resume" className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300">Resume</Link></li>
-                    <li> <Link to="/ContactMe" className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300">Contact</Link></li>
-
-                </ul>
+            {/* Desktop Nav */}
+            <nav className="hidden md:flex space-x-8">
+                {navLinks}
             </nav>
-            {/* Mobile Navigation (Hamburger Menu) */}
-            <div className="md:hidden flex items-center">
-                <button className="text-white focus:outline-none">
-                    <i className="fas fa-bars text-2xl"></i> {/* You can use a hamburger icon */}
-                </button>
-            </div>
+
+            {/* Mobile Hamburger */}
+            <button onClick={toggleMenu} className="md:hidden text-white">
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
 
             {/* Mobile Menu */}
-            <div className="md:hidden w-full absolute top-16 left-0 bg-gradient-to-r from-blue-500 via-purple-300 to-pink-200 z-10 hidden">
-                <ul className="flex flex-col space-y-6 p-6">
-                    <li>
-                        <Link
-                            to="/skills"
-                            className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300"
-                        >
-                            Skills
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/Work-Experiences"
-                            className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300"
-                        >
-                            Experiences
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/Projects"
-                            className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300"
-                        >
-                            Projects
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="Resume"
-                            className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300"
-                        >
-                            Resume
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/ContactMe"
-                            className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300"
-                        >
-                            Contact
-                        </Link>
-                    </li>
+            {isOpen && (
+                <ul className="absolute top-16 left-0 w-full bg-gradient-to-r from-blue-500 via-purple-300 to-pink-200 p-4 space-y-4 text-white flex flex-col md:hidden z-50">
+                    {navLinks}
                 </ul>
-            </div>
+            )}
         </header>
     );
 }
