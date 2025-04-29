@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react'; // or use SVGs if you prefer
 
@@ -7,6 +7,32 @@ function TopBar()
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => setIsOpen(!isOpen);
+    const menuRef = useRef();
+
+    useEffect(() =>
+    {
+        const handleClickOutside = (event) =>
+        {
+            if (menuRef.current && !menuRef.current.contains(event.target))
+            {
+                setIsOpen(false);
+            }
+        };
+
+        if (isOpen)
+        {
+            document.addEventListener("mousedown", handleClickOutside);
+        } else
+        {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+
+        return () =>
+        {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isOpen]);
+
 
     const navLinks = (
         <>
@@ -36,7 +62,7 @@ function TopBar()
 
             {/* Mobile Menu */}
             {isOpen && (
-                <ul className="absolute top-16 left-0 w-full bg-gradient-to-r from-blue-500 via-purple-300 to-pink-200 p-4 space-y-4 text-white flex flex-col md:hidden z-50">
+                <ul ref={menuRef} className="absolute top-16 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-gradient-to-r from-blue-500 via-purple-300 to-pink-200 p-2 space-y-2 text-white flex flex-col md:hidden z-50 rounded-lg shadow-lg">
                     {navLinks}
                 </ul>
             )}
