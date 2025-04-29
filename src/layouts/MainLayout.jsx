@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import TopBar from '../components/Topbar';
-import Sidebar from '../components/Sidebar';
+//import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 
 function MainLayout()

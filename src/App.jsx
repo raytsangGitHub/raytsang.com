@@ -25,10 +25,10 @@ function App()
 
     <Routes>
       <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} />
+        {/*<Route index element={<Home />} />
         <Route path="profile" element={<Profile />} />
         <Route path="settings" element={<Settings />} />
-        <Route path="/reference" element={<ReactReference />} />
+        <Route path="/reference" element={<ReactReference />} />*/}
 
         {/* TopBar links*/}
         <Route path="skills" element={<Skills />} />
