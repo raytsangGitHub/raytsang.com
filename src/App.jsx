@@ -4,10 +4,10 @@ import MainLayout from './layouts/MainLayout';
 import { useState } from 'react';
 import './index.css';
 import ReactReference from './ReactRef.jsx';
-import Profile from './pages/Profile.jsx';  // Import Profile component
-import Settings from './pages/Settings.jsx';  // Import Settings component
+//import Profile from './pages/Profile.jsx';  // Import Profile component
+//import Settings from './pages/Settings.jsx';  // Import Settings component
 import Home from './pages/Home.jsx'; //  Home component
-import PageContent from './components/PageContent.jsx';
+//import PageContent from './components/PageContent.jsx';
 import NotFoundPage from "./pages/NotFoundPage";
 
 // Import Top bar pages:
@@ -25,12 +25,13 @@ function App()
 
     <Routes>
       <Route path="/" element={<MainLayout />}>
-        {/*<Route index element={<Home />} />
+        {/*
         <Route path="profile" element={<Profile />} />
         <Route path="settings" element={<Settings />} />
         <Route path="/reference" element={<ReactReference />} />*/}
 
         {/* TopBar links*/}
+        <Route index element={<Home />} />
         <Route path="skills" element={<Skills />} />
         <Route path="work-experiences" element={<WorkExperiences />} />
         <Route path="projects" element={<Projects />} />
