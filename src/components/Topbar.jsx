@@ -8,11 +8,11 @@ function TopBar()
             <h1>My Website</h1>
             <nav className="flex w-full">
                 <ul className="flex space-x-8 ml-auto">
-                    <li className="cursor-pointer hover:underline">Skills</li>
-                    <li className="cursor-pointer hover:underline">Work Experiences</li>
-                    <li className="cursor-pointer hover:underline">Project</li>
-                    <li className="cursor-pointer hover:underline">Resume</li>
-                    <li className="cursor-pointer hover:underline">Contact Me</li>
+                    <li className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300">Skills</li>
+                    <li className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300">Work Experiences</li>
+                    <li className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300">Project</li>
+                    <li className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300">Resume</li>
+                    <li className="cursor-pointer hover:underline hover:text-yellow-300 hover:drop-shadow-md transition duration-300">Contact Me</li>
                 </ul>
             </nav>
 

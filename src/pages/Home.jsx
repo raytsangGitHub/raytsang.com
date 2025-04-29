@@ -5,11 +5,9 @@ import MainLayout from '../layouts/MainLayout';
 export default function Home()
 {
     return (
-
-        <Routes>
-            <Route path="*" element={<MainLayout />} />
-        </Routes>
-
+        <div>
+            <p>Welcome to the home page!</p>
+        </div>
     );
 }
 
