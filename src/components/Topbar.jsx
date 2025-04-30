@@ -52,7 +52,9 @@ function TopBar()
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex space-x-8">
-                {navLinks}
+                <ul className="flex space-x-8 list-none">
+                    {navLinks}
+                </ul>
             </nav>
 
             {/* Mobile Hamburger */}

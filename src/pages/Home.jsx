@@ -5,18 +5,29 @@ import MainLayout from '../layouts/MainLayout';
 export default function Home()
 {
     return (
-        <div>
-            <p>Throughout my career, I have consistently demonstrated strong leadership and organizational skills, enabling me to effectively plan, allocate resources, and coordinate teams in fast-paced, dynamic environments. My technical expertise spans a variety of programming languages, including C#, ASP.NET, Python, Java, and Golang, Microsoft TFS,  among others. I am also proficient in a range of DevOps tools such as Visual Studio 2022, Docker, Orchestrator, and Jenkins, ensuring smooth CI/CD pipeline integrations and efficient project delivery.</p>
-            <br />
-            <p>My experience includes developing analytic web applications, and implementing automated testing frameworks. I have also designed and managed robust databases, utilizing SQL Server and Entity Framework, while adhering to best practices such as SOLID principles and design patterns. Additionally, I am well-versed in cryptocurrency technologies, including Windows Azure, which have been integral in the projects I’ve led.</p>
-            <br />
-            <p>In my most recent role as a self-employed Software Development Engineer, I spearheaded the development of a full-stack analytic web application, taking responsibility for every aspect from conception to deployment. This role allowed me to exercise my expertise in database design, middle-tier service development, and microservices architecture, all while maintaining a focus on delivering high-quality, scalable solutions.</p>
-            <br />
-            <p>Beyond my technical abilities, I am an effective communicator who values team collaboration and positive working relationships. My experience leading both onshore and offshore teams has equipped me with the skills to foster environments that prioritize quality, efficiency, and innovation.</p>
-            <br />
-            <p>I am eager to bring my diverse skill set and experience to a forward-thinking organization where I can contribute to impactful projects. I would welcome the opportunity to discuss how I can add value to your team.</p>
-            <br />
+        <div className="min-h-screen bg-white flex items-center justify-center px-6 py-12">
+            <div className="max-w-3xl text-center">
+                <h1 className="text-4xl font-bold text-gray-900 mb-6">
+                    Hi, I'm Raymond M. Tsang
+                </h1>
+                <p className="text-lg text-gray-700 mb-4">
+                    A seasoned Software Development Engineer with deep expertise in C#, .NET, DevOps, and scalable system architecture. I specialize in building data-driven web apps, designing robust services, and streamlining CI/CD workflows.
+                </p>
+                <p className="text-lg text-gray-700 mb-4">
+                    With a passion for problem-solving and a track record of full-cycle project leadership, I bring clarity, precision, and a collaborative mindset to every team I join.
+                </p>
+                <p className="text-lg text-gray-700 mb-8">
+                    Let's build something powerful together.
+                </p>
+                <a
+                    href="#projects"
+                    className="inline-block bg-blue-600 text-white text-sm font-semibold px-6 py-3 rounded-2xl shadow-md hover:bg-blue-700 transition duration-300"
+                >
+                    Explore My Projects
+                </a>
+            </div>
         </div>
+
     );
 }
 
