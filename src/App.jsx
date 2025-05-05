@@ -6,16 +6,16 @@ import './index.css';
 import ReactReference from './ReactRef.jsx';
 //import Profile from './pages/Profile.jsx';  // Import Profile component
 //import Settings from './pages/Settings.jsx';  // Import Settings component
-import Home from './pages/Home.jsx'; //  Home component
+import Home from './pages/HomePage.jsx'; //  Home component
 //import PageContent from './components/PageContent.jsx';
 import NotFoundPage from "./pages/NotFoundPage";
 
 // Import Top bar pages:
-import Skills from './pages/Skills';
-import WorkExperiences from './pages/WorkExperiences';
-import Projects from './pages/Projects';
-import Resume from './pages/Resume';
-import ContactMe from './pages/ContactMe';
+import Skills from './pages/SkillsPage.jsx';
+import WorkExperiences from './pages/WorkExperiencesPage.jsx';
+import Projects from './pages/ProjectsPage.jsx';
+import Resume from './pages/ResumePage.jsx';
+import ContactMe from './pages/ContactMePage.jsx';
 
 function App()
 {
