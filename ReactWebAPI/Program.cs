@@ -26,7 +26,7 @@ var app = builder.Build();
 app.UseCors(c => c.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 
 // Configure middleware if needed
-// Configure the HTTP request pipeline.
+// To Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     // Enable Swagger

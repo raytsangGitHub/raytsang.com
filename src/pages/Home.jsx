@@ -5,7 +5,7 @@ import MainLayout from '../layouts/MainLayout';
 export default function Home()
 {
     return (
-        <div className="min-h-screen bg-white flex items-center justify-center px-6 py-12">
+        <div className="min-h-screen bg-white flex justify-center px-2 py-3">
             <div className="max-w-3xl text-center">
                 <h1 className="text-4xl font-bold text-gray-900 mb-6">
                     Hi, I'm Raymond M. Tsang
