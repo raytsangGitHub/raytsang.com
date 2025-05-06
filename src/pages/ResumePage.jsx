@@ -11,7 +11,7 @@ export default function Resume()
             <p className="text-xl font-semibold mb-6">Software Engineer</p>
 
             <a
-                href={`${import.meta.env.BASE_URL}resume.pdf`}
+                href={`${import.meta.env.BASE_URL}Resume.pdf`}
                 download="Tsang-Resume.pdf"
                 className="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-xl shadow hover:bg-blue-700 transition mb-8"
             >
