@@ -1,72 +1,60 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const skills = {
-    openSource: [
-        'JavaScript', 'Python', 'Node.js', 'React',
-        'Docker', 'Kubernetes', 'GitHub Actions',
-        'GitLab CI/CD', 'NUnit', 'xUnit',
-        'Postman', 'Swagger', 'VS Code',
-    ],
-    proprietary: [
-        'C#', '.NET Core', 'ASP.NET MVC',
-        'Entity Framework', 'Visual Studio',
-        'SQL Server', 'Azure App Services',
-        'Azure DevOps Pipelines', 'Microsoft MCP (SQL Server 2000)',
-    ],
-};
-
-export default function SkillsPage()
+function Skills()
 {
-    const [activeTab, setActiveTab] = useState('openSource');
-
     return (
-        <div className="max-w-4xl mx-auto p-6">
-            <h1 className="text-3xl font-bold mb-6 text-center">Skills</h1>
+        <div className="container mx-auto p-6">
+            <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Skills</h1>
 
-            {/* Tablist */}
-            <div role="tablist" className="flex justify-center gap-4 mb-6">
-                {Object.entries({
-                    openSource: 'Open Source',
-                    proprietary: 'Proprietary',
-                }).map(([key, label]) => (
-                    <button
-                        key={key}
-                        role="tab"
-                        aria-selected={activeTab === key}
-                        aria-controls={`${key}-panel`}
-                        className={`cursor-pointer px-6 py-2 rounded-full text-sm font-medium 
-              ${activeTab === key
-                                ? 'bg-blue-600 text-white border-2 border-blue-600'
-                                : 'bg-gray-100 text-gray-800 border-2 border-gray-300 hover:bg-gray-200'}
-              transition-all duration-200`}
-                        onClick={() => setActiveTab(key)}
-                    >
-                        {label}
-                    </button>
-                ))}
+            <div className="skill-item bg-white p-6 rounded-lg shadow-md mb-6">
+                <h3 className="text-2xl font-semibold text-gray-900">Programming Languages</h3>
+                <ul className="list-disc pl-5 text-gray-700 mt-4">
+                    <li>JavaScript (ES6+)</li>
+                    <li>TypeScript</li>
+                    <li>C# (.NET Core, ASP.NET MVC)</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                </ul>
             </div>
 
-            {/* Tab Panels */}
-            <div>
-                {Object.keys(skills).map((key) => (
-                    <div
-                        key={key}
-                        role="tabpanel"
-                        id={`${key}-panel`}
-                        hidden={activeTab !== key}
-                        className="grid grid-cols-2 md:grid-cols-3 gap-4"
-                    >
-                        {skills[key].map((skill) => (
-                            <div
-                                key={skill}
-                                className="border border-gray-200 rounded-xl p-4 text-center shadow-sm hover:shadow-md transition"
-                            >
-                                <span className="font-medium text-gray-800">{skill}</span>
-                            </div>
-                        ))}
-                    </div>
-                ))}
+            <div className="skill-item bg-white p-6 rounded-lg shadow-md mb-6">
+                <h3 className="text-2xl font-semibold text-gray-900">Web Development</h3>
+                <ul className="list-disc pl-5 text-gray-700 mt-4">
+                    <li>ReactJS / NextJS</li>
+                    <li>Vue.js</li>
+                    <li>HTML5 & CSS3</li>
+                    <li>Node.js</li>
+                    <li>RESTful APIs</li>
+                </ul>
+            </div>
+
+            <div className="skill-item bg-white p-6 rounded-lg shadow-md mb-6">
+                <h3 className="text-2xl font-semibold text-gray-900">Frameworks & Libraries</h3>
+                <ul className="list-disc pl-5 text-gray-700 mt-4">
+                    <li>React, Redux</li>
+                    <li>ASP.NET Core</li>
+                    <li>Spring Boot</li>
+                    <li>Express.js</li>
+                    <li>Tailwind CSS</li>
+                </ul>
+            </div>
+
+            <div className="skill-item bg-white p-6 rounded-lg shadow-md mb-6">
+                <h3 className="text-2xl font-semibold text-gray-900">Tools & Databases</h3>
+                <ul className="list-disc pl-5 text-gray-700 mt-4">
+                    <li>Git & GitHub</li>
+                    <li>Docker</li>
+                    <li>CI/CD (Azure DevOps, Jenkins)</li>
+                    <li>SQL (MySQL, PostgreSQL, SQL Server)</li>
+                    <li>MongoDB</li>
+                </ul>
+            </div>
+
+            <div className="text-center mt-8">
+                <p className="text-lg text-gray-700">For a more detailed breakdown of my skills, <a href="/resume" className="text-blue-600 hover:underline">view my resume</a>.</p>
             </div>
         </div>
     );
 }
+
+export default Skills;
