@@ -12,7 +12,7 @@ export default function Resume()
 
             <a
                 href={`${import.meta.env.BASE_URL}resume.pdf`}
-                download="resume.pdf"
+                download="Tsang-Resume.pdf"
                 className="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-xl shadow hover:bg-blue-700 transition mb-8"
             >
                 Download Resume (PDF)
