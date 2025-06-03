@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 
 export default function Home()
@@ -19,12 +19,12 @@ export default function Home()
                 <p className="text-lg text-gray-700 mb-8">
                     Let's build something powerful together.
                 </p>
-                <a
-                    href="#projects"
+                <Link
+                    to="/projects"
                     className="inline-block bg-blue-600 text-white text-sm font-semibold px-6 py-3 rounded-2xl shadow-md hover:bg-blue-700 transition duration-300"
                 >
                     Explore My Projects
-                </a>
+                </Link>
             </div>
         </div>
 
