@@ -22,7 +22,7 @@ function Projects()
                 'Optimized backend performance.',
                 'Reduced deployment times.'
             ],
-            link: 'https://raytsanggithub.github.io/SchoolRegistration/',
+            schoolreg: 'https://raytsanggithub.github.io/SchoolRegistration/',
             repoLink: 'https://github.com/raytsangGitHub/raytsang.com'
         },
         {
@@ -69,7 +69,9 @@ function Projects()
                         ))}
                     </ul>
                     <p className="mt-4">
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Visit School Registration </a>
+                        <a href={project.schoolreg} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                            Visit School Registration
+                        </a>
                         <span className="text-blue-500">{" | "}</span>
                         <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">GitHub Repository</a>
                     </p>
