@@ -12,15 +12,17 @@ function Projects()
             duration: 'March 2024 - Present',
             overview: 'A scalable, extensible, maintainable, and modular system for school registration.',
             responsibilities: [
-                'Designed and implemented backend using PostgreSQL, hosted in Render.com',
-                'Designed and implemented Restful API using ASP.NET Core Web API, Entity Framework.',
-                'Developed a responsive front-end using React, Vite, TailwindCSS.',
-                'Deployed using GitHub Actons, Docker containers, Fly deploy.'
+                'Designed and implemented backend using PostgreSQL, deployed to Render.com',
+                'Designed and implemented Restful API using ASP.NET Core Web API, Entity Framework, deployed to Fly.io.',
+                'Developed a responsive front-end using React, Vite, TailwindCSS, CI/DC on GitHub pages.'
             ],
             keyHighlights: [
-                'Automated inventory alerts.',
-                'Optimized backend performance.',
-                'Reduced deployment times.'
+                'Cloud-based application designed with clean architecture principles for scalability and maintainability.',
+                'Implemented full CI/CD pipelines enabling automated testing, building, and deployment, significantly reducing deployment times.',
+                'Optimized backend performance through efficient database queries and API response improvements.',
+                'Modular and extensible system design facilitating easy feature additions and maintenance.',
+                'Responsive UI developed with modern frameworks ensuring seamless user experience across devices.'
+
             ],
             schoolreg: 'https://raytsanggithub.github.io/SchoolRegistration/',
             repoLink: 'https://github.com/raytsangGitHub/raytsang.com'
