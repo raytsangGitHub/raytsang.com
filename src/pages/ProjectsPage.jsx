@@ -22,7 +22,7 @@ function Projects()
                 'Optimized backend performance.',
                 'Reduced deployment times.'
             ],
-            link: [<a href='https://raytsanggithub.github.io/SchoolRegistration/'>Visit School Registration App</a>],
+            link: 'https://raytsanggithub.github.io/SchoolRegistration/',
             repoLink: 'https://github.com/raytsangGitHub/raytsang.com'
         },
         {
