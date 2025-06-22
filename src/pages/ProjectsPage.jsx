@@ -1,25 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Projects()
 {
     const projects = [
         {
-            title: 'Inventory Management System',
+            title: 'School Registration System',
             role: 'Full Stack Developer',
-            technologies: 'C#, .NET Core, React, SQL Server, Docker, Azure',
-            duration: 'March 2022 - Present',
-            overview: 'A scalable inventory management system for a retail client.',
+            technologies: 'C#, ASP.NET Core Web API, React, Vite, TailwindCSS, PostgreSQL, Docker',
+            hosting: 'GitHub, Render.com, Fly.IO',
+            duration: 'March 2024 - Present',
+            overview: 'A scalable, extensible, maintainable, and modular system for school registration.',
             responsibilities: [
-                'Designed and implemented backend API using .NET Core.',
-                'Developed a responsive front-end using React.',
-                'Deployed using Docker containers.'
+                'Designed and implemented backend using PostgreSQL, hosted in Render.com',
+                'Designed and implemented Restful API using ASP.NET Core Web API, Entity Framework.',
+                'Developed a responsive front-end using React, Vite, TailwindCSS.',
+                'Deployed using GitHub Actons, Docker containers, Fly deploy.'
             ],
             keyHighlights: [
                 'Automated inventory alerts.',
                 'Optimized backend performance.',
                 'Reduced deployment times.'
             ],
-            repoLink: 'https://github.com/yourusername/inventory-management-system'
+            link: [<a href='https://raytsanggithub.github.io/SchoolRegistration/'>Visit School Registration App</a>],
+            repoLink: 'https://github.com/raytsangGitHub/raytsang.com'
         },
         {
             title: 'E-commerce Web App',
@@ -37,7 +41,7 @@ function Projects()
                 'Increased sales with a recommendation system.',
                 'Automated pipelines for deployment.'
             ],
-            repoLink: 'https://github.com/yourusername/e-commerce-web-app'
+            repoLink: 'https://github.com/raytsangGitHub/raytsang.com'
         }
     ];
 
@@ -65,6 +69,8 @@ function Projects()
                         ))}
                     </ul>
                     <p className="mt-4">
+                        <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Visit School Registration </a>
+                        <span className="text-blue-500">{" | "}</span>
                         <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">GitHub Repository</a>
                     </p>
                 </div>
