@@ -22,26 +22,27 @@ function App()
   const [count, setCount] = useState(0)
 
   return (
-
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        {/*
+    
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          {/*
         <Route path="profile" element={<Profile />} />
         <Route path="settings" element={<Settings />} />
         <Route path="/reference" element={<ReactReference />} />*/}
 
-        {/* TopBar links*/}
-        <Route index element={<Home />} />
-        <Route path="skills" element={<Skills />} />
-        <Route path="work-experiences" element={<WorkExperiences />} />
-        <Route path="projects" element={<Projects />} />
-        <Route path="resume" element={<Resume />} />
-        <Route path="contactMe" element={<ContactMe />} />
+          {/* TopBar links*/}
+          <Route index element={<Home />} />
+          <Route path="skills" element={<Skills />} />
+          <Route path="work-experiences" element={<WorkExperiences />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="resume" element={<Resume />} />
+          <Route path="contactMe" element={<ContactMe />} />
 
-        {/* 404 Catch-All */}
-        <Route path="*" element={<NotFoundPage />} />
-      </Route>
-    </Routes>
+          {/* 404 Catch-All */}
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    
   );
 }
 

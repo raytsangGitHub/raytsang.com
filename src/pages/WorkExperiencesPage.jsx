@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function WorkExperiences()
 {
@@ -49,7 +50,10 @@ function WorkExperiences()
             </div>
 
             <div className="text-center mt-8">
-                <p className="text-lg text-gray-700">For a detailed look at my work history, <a href="/resume" className="text-blue-600 hover:underline">view my resume</a>.</p>
+                <p className="text-lg text-gray-700">For a detailed look at my work history, {" "}
+                    <Link to="/resume" className="text-blue-600 hover:underline">
+                        view my resume
+                    </Link>.</p>
             </div>
         </div>
     );

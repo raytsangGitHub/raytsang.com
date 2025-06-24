@@ -4,12 +4,13 @@ import MainLayout from '../layouts/MainLayout';
 
 export default function Home()
 {
-    const projects = [
-        { id: 'rest-api', name: 'Rest API Project' },
+    const buttonmapper = [
+        { id: 'rest-api', name: 'Rest API Project', url: 'https://raytsanggithub.github.io/SchoolRegistration/', },
 
         { id: 'Cryptocurrency', name: 'Cryptocurrency Project' },
         { id: 'ai-ml', name: 'Machine Learning Project' },
-        { id: 'gpu-cuda', name: 'GPU Project' },
+        { id: 'gpu-cuda', name: 'Parallel Programming - CUDA' },
+
     ];
     return (
         <div className="min-h-screen bg-white flex justify-center px-2 py-3">
@@ -30,8 +31,9 @@ export default function Home()
                 <p className="text-lg text-gray-700 mb-8">
                     Let's build something powerful together.
                 </p>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <Link
+                    <Link //link is for internal routing within the SPA
                         to="/projects"
                         className="inline-block bg-blue-600 text-white text-sm font-semibold px-6 py-3 rounded-2xl shadow-md hover:bg-blue-700 transition duration-300"
                     >
@@ -39,20 +41,33 @@ export default function Home()
                     </Link>
 
                 </div><br></br>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {projects.map((project) => (
-                        <Link
-                            key={project.id}
-                            to={`/projects/${project.id}`}
-                            className="block bg-blue-600 text-white p-4 rounded-2xl shadow-md hover:bg-blue-700 transition duration-300"
-                        >
-                            {project.name}
-                        </Link>
-                    ))}
+
+                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {buttonmapper.map((mapper) =>
+                        mapper.url ? (
+                            <a
+                                key={mapper.id}
+                                href={mapper.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block bg-blue-600 text-white text-sm font-semibold px-6 p-3 rounded-2xl shadow-md hover:bg-blue-700 transition duration-300"
+                            >
+                                {mapper.name}
+                            </a>
+                        ) : (
+                            <Link
+                                key={mapper.id}
+                                to={`/under-construction?project=${mapper.id}`}
+                                className="block bg-gray-400 text-white text-sm font-semibold px-6 p-3 rounded-2xl shadow-md hover:bg-gray-500 transition duration-300"
+                            >
+                                {mapper.name}
+                            </Link>
+                        )
+                    )}
                 </div>
             </div>
-        </div >
-
+        </div>
     );
 }
+
 
