@@ -9,11 +9,11 @@ function ContactMe()
                 <div className="space-y-6">
                     <div className="flex items-center">
                         <i className="fas fa-phone-alt text-blue-500 mr-4"></i>
-                        <p className="text-xl">Phone: <a href="tel:+1234567890" className="text-blue-500">+1 (206) 687-8364</a></p>
+                        <p className="text-xl">Phone: +1 (206) 687-8364</p>
                     </div>
                     <div className="flex items-center">
                         <i className="fas fa-envelope text-blue-500 mr-4"></i>
-                        <p className="text-xl">Email: <a href="mailto:your_email@example.com" className="text-blue-500">Igenericpro@gmail.com</a></p>
+                        <p className="text-xl">Email: Igenericpro@gmail.com</p>
                     </div>
                     <div className="flex items-center">
                         <i className="fas fa-map-marker-alt text-blue-500 mr-4"></i>
