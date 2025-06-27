@@ -57,7 +57,7 @@ export default function Home()
                         ) : (
                             <Link
                                 key={mapper.id}
-                                to={`/under-construction?project=${mapper.id}`}
+                                to={`/NotFoundPage?project=${mapper.id}`}
                                 className="block bg-gray-400 text-white text-sm font-semibold px-6 p-3 rounded-2xl shadow-md hover:bg-gray-500 transition duration-300"
                             >
                                 {mapper.name}

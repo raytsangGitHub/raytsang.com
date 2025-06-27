@@ -5,46 +5,32 @@ function Projects()
 {
     const projects = [
         {
-            title: 'School Registration System',
+            title: 'School Registration System – A RESTful API Application',
             role: 'Full Stack Developer',
-            technologies: 'C#, ASP.NET Core Web API, React, Vite, TailwindCSS, PostgreSQL, Docker',
-            hosting: 'GitHub, Render.com, Fly.IO',
-            duration: 'March 2024 - Present',
-            overview: 'A scalable, extensible, maintainable, and modular system for school registration.',
-            responsibilities: [
-                'Designed and implemented backend using PostgreSQL, deployed to Render.com',
-                'Designed and implemented Restful API using ASP.NET Core Web API, Entity Framework, deployed to Fly.io.',
-                'Developed a responsive front-end using React, Vite, TailwindCSS, CI/DC on GitHub pages.'
+            duration: 'April 2025 – Present',
+            technologies: 'ASP.NET Core Web API, C#, React, Vite, TailwindCSS, PostgreSQL (Supabase), Docker, GitHub Actions',
+            hosting: 'GitHub, Render.com, Fly.io',
+            overview: 'A cloud-native, modular school registration system built for scalability, maintainability, and ease of deployment. Developed using Clean Architecture and SDLC best practices.',
+            architecture_design: [
+                'Designed a layered architecture with clear separation of concerns across domain, application, infrastructure, and presentation layers.',
+                'Backend API developed in ASP.NET Core and hosted on Fly.io, adhering to RESTful standards.',
+                'PostgreSQL database provisioned and managed using Supabase, allowing real-time debugging and scalability.',
+                'Frontend built using React, Vite, and TailwindCSS, deployed to GitHub Pages for fast global delivery.',
+                'Codebase structured to support plug-and-play module extension, enabling rapid development of future features.'
             ],
-            keyHighlights: [
-                'Cloud-based application designed with clean architecture principles for scalability and maintainability.',
-                'Implemented full CI/CD pipelines enabling automated testing, building, and deployment, significantly reducing deployment times.',
-                'Optimized backend performance through efficient database queries and API response improvements.',
-                'Modular and extensible system design facilitating easy feature additions and maintenance.',
-                'Responsive UI developed with modern frameworks ensuring seamless user experience across devices.'
-
+            devOps_deployment: [
+                'Architected CI/CD pipelines using GitHub Actions to automate build, test, and deployment workflows.',
+                'Leveraged Docker for local development and production parity, reducing environment-specific issues.',
+                'Managed secrets and environment variables securely across environments to ensure safe deployment practices.'
+            ],
+            keyAccomplishments: [
+                'Deployed a fully operational cloud-based app using free-tier infrastructure with Fly.io, Supabase, and GitHub Pages.',
+                'Reduced manual deployment effort by 80% via automated CI/CD.',
+                'Ensured seamless cross-device user experience with a responsive, modern frontend.'
             ],
             schoolreg: 'https://raytsanggithub.github.io/SchoolRegistration/',
             repoLink: 'https://github.com/raytsangGitHub/raytsang.com'
         },
-        {
-            title: 'E-commerce Web App',
-            role: 'Backend Developer',
-            technologies: 'C#, ASP.NET MVC, SQL Server, Azure DevOps',
-            duration: 'June 2021 - February 2022',
-            overview: 'Secure e-commerce platform for browsing and purchasing products.',
-            responsibilities: [
-                'Designed RESTful APIs for authentication and product management.',
-                'Integrated Stripe and PayPal payment systems.',
-                'Managed CI/CD pipelines using Azure DevOps.'
-            ],
-            keyHighlights: [
-                'OAuth2 security for user authentication.',
-                'Increased sales with a recommendation system.',
-                'Automated pipelines for deployment.'
-            ],
-            repoLink: 'https://github.com/raytsangGitHub/raytsang.com'
-        }
     ];
 
     return (
@@ -54,33 +40,46 @@ function Projects()
                 <div key={index} className="bg-white p-6 mb-6 shadow-lg rounded-lg">
                     <h3 className="text-xl font-semibold text-gray-800">{project.title}</h3>
                     <p className="text-gray-600"><strong>Role:</strong> {project.role}</p>
-                    <p className="text-gray-600"><strong>Technologies:</strong> {project.technologies}</p>
                     <p className="text-gray-600"><strong>Duration:</strong> {project.duration}</p>
-                    <p className="text-gray-600"><strong>Overview:</strong> {project.overview}</p>
+                    <p className="text-gray-600"><strong>Technologies:</strong> {project.technologies}</p>
+                    <p className="text-gray-600"><strong>Hosting:</strong> {project.hosting}</p>
+                    <p className="text-gray-600 mt-4"><strong>Overview:</strong> {project.overview}</p>
 
-                    <ul className="list-disc pl-6 text-gray-700 mt-4">
-                        {project.responsibilities.map((item, idx) => (
-                            <li key={idx}>{item}</li>
-                        ))}
-                    </ul>
-
-                    <p className="font-semibold text-lg mt-4">Key Highlights:</p>
+                    <p className="font-semibold text-lg mt-4">System Architecture & Design:</p>
                     <ul className="list-disc pl-6 text-gray-700">
-                        {project.keyHighlights.map((item, idx) => (
+                        {project.architecture_design.map((item, idx) => (
                             <li key={idx}>{item}</li>
                         ))}
                     </ul>
+
+                    <p className="font-semibold text-lg mt-4">DevOps & Deployment:</p>
+                    <ul className="list-disc pl-6 text-gray-700">
+                        {project.devOps_deployment.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                        ))}
+                    </ul>
+
+                    <p className="font-semibold text-lg mt-4">Key Accomplishments:</p>
+                    <ul className="list-disc pl-6 text-gray-700">
+                        {project.keyAccomplishments.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                        ))}
+                    </ul>
+
                     <p className="mt-4">
                         <a href={project.schoolreg} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
                             Visit School Registration
                         </a>
                         <span className="text-blue-500">{" | "}</span>
-                        <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">GitHub Repository</a>
+                        <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                            GitHub Repository
+                        </a>
                     </p>
                 </div>
             ))}
         </div>
     );
+
 }
 
 export default Projects;

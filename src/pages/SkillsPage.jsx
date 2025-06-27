@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 function Skills()
 {
     return (
@@ -51,7 +51,7 @@ function Skills()
             <div className="skill-item bg-white p-6 rounded-lg shadow-md mb-6">
                 <h3 className="text-2xl font-semibold text-gray-900">Databases</h3>
                 <ul className="list-disc pl-5 text-gray-700 mt-4">
-                    <li>SQL (MySQL, PostgreSQL, SQL Server)</li>
+                    <li>SQL Server, PostgreSQL, MySQL</li>
                 </ul>
             </div>
 
