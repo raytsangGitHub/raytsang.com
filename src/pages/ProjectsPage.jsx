@@ -5,11 +5,15 @@ function Projects()
 {
     const projects = [
         {
-            title: 'School Registration System – A RESTful API Application',
+            title: [
+                'School Registration System – A RESTful API Application'
+
+            ],
+
             role: 'Full Stack Developer',
             duration: 'April 2025 – Present',
             technologies: 'ASP.NET Core Web API, C#, React, Vite, TailwindCSS, PostgreSQL (Supabase), Docker, GitHub Actions',
-            hosting: 'GitHub, Render.com, Fly.io',
+            hosting: 'GitHub, Supasase.com, Fly.io',
             overview: 'A cloud-native, modular school registration system built for scalability, maintainability, and ease of deployment. Developed using Clean Architecture and SDLC best practices.',
             architecture_design: [
                 'Designed a layered architecture with clear separation of concerns across domain, application, infrastructure, and presentation layers.',
@@ -28,7 +32,7 @@ function Projects()
                 'Reduced manual deployment effort by 80% via automated CI/CD.',
                 'Ensured seamless cross-device user experience with a responsive, modern frontend.'
             ],
-            schoolreg: 'https://raytsanggithub.github.io/SchoolRegistration/',
+            schoolUrl: 'https://raytsanggithub.github.io/SchoolRegistration/',
             repoLink: 'https://github.com/raytsangGitHub/raytsang.com'
         },
     ];
@@ -38,7 +42,11 @@ function Projects()
             <h2 className="text-2xl font-bold mb-6">Projects</h2>
             {projects.map((project, index) => (
                 <div key={index} className="bg-white p-6 mb-6 shadow-lg rounded-lg">
-                    <h3 className="text-xl font-semibold text-gray-800">{project.title}</h3>
+                    <a href={project.schoolUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                        
+                        <h3 className="text-xl font-semibold text-blue-500">{project.title}</h3>
+                    </a>
+
                     <p className="text-gray-600"><strong>Role:</strong> {project.role}</p>
                     <p className="text-gray-600"><strong>Duration:</strong> {project.duration}</p>
                     <p className="text-gray-600"><strong>Technologies:</strong> {project.technologies}</p>
@@ -67,10 +75,6 @@ function Projects()
                     </ul>
 
                     <p className="mt-4">
-                        <a href={project.schoolreg} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-                            Visit School Registration
-                        </a>
-                        <span className="text-blue-500">{" | "}</span>
                         <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
                             GitHub Repository
                         </a>
